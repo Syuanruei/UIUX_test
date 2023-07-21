@@ -1,0 +1,114 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'Noto Sans TC','Microsoft JhengHei';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+  }
+
+body{
+    font-family: 'Noto Sans TC','Microsoft JhengHei', sans-serif;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main{
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main>header{
+    text-align: center;
+}
+.main>header img{
+    width: 150px;
+    margin-top: 20px;
+}
+.main>nav{
+    border-top: 1px solid #8a8000;
+    border-bottom: 1px solid #8a8000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main>nav>ul>li{
+    
+    text-align: center;
+    height: 60px; 
+    line-height: 60px;
+    /* 給inline-block用的 */
+    /* margin-right: -4px; */
+    /* display: inline-block;
+    width: 33.3333%; */
+    
+    /* 給flex用的 */
+    flex:1;
+}
+.main>nav>ul{
+    display: flex;
+}
+    
+
+.main>.content img{
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.main>nav>ul>li>a.nav_item{
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    /* font-weight: bold; */
+}
+.main>nav>ul>li>a.nav_item:hover{
+    background-color: #dcdddd;
+
+}
+/* .main>nav>ul>li>a.nav_item:hover .nav_text{
+    color: chocolate;
+}   */
+.main>nav>ul>li>a.nav_item .nav_text{
+    color: #000;
+}
+.main>nav>ul>li>a.nav_item .nav_text_en{
+    color: #8a8000;
+}
+
+
+
+@media(max-width:992px){
+    .main>nav>ul{
+        flex-direction: column;
+    }
+    .main>nav>ul>li{
+        width: 100%;
+    }
+}
